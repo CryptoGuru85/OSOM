@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ],
+      "route": "list"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "blob",
+      "name": "templatesBlob",
+      "path": "templates/templates.json",
+      "connection": "AzureWebJobsStorage",
+      "direction": "in"
+    }
+  ],
+  "scriptFile": "../dist/ListTemplates/index.js"
+}
